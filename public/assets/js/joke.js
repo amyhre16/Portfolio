@@ -71,6 +71,9 @@ $(document).ready(function () {
 
 		$.post('/sendEmail', email_info, function (result) {
 			console.log(result);
+			$('#name').val("");
+			$('#email').val("");
+			$('#message').val("");
 		});
 	})
 });
