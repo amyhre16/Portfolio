@@ -4,6 +4,8 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var path = require('path');
+var SparkPost = require('sparkpost');
+var client = new SparkPost();
 
 var app = express();
 
@@ -14,14 +16,42 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 app.use(express.static(__dirname + "/public"));
 
-app.get('/', function(req, res) {
+app.get('/', function (req, res) {
 	res.sendfile('index.html');
 });
 
-app.get('/portfolio', function(req, res) {
+app.get('/portfolio', function (req, res) {
 	res.sendfile('portfolio.html');
 });
 
-app.listen(process.env.PORT || 8080, function() {
+app.get('/contact', function(req, res) {
+	res.sendfile('contact.html');
+});
+
+app.post('/sendEmail', function (req, res) {
+	console.log(req.body);
+	client.transmissions.send({
+		content: {
+			from: 'admin@anthonymyhre.com',
+			subject: 'Message from ' + req.body.name,
+			html: '<html><body>' + req.body.message + '<br /><br />Sent from: ' + req.body.email + '</body></html>'
+		},
+		recipients: [
+			{ address: 'anthony.myhre@utexas.edu' }
+		]
+	})
+		.then(function (data) {
+			console.log('Woohoo! You just sent your first mailing!');
+			console.log(data);
+
+			res.json("The message was sent!");
+		})
+		.catch(function (err) {
+			console.log('Whoops! Something went wrong');
+			console.log(err);
+		});
+});
+
+app.listen(process.env.PORT || 8080, function () {
 	console.log("Server is listening to port", process.env.PORT || 8080);
 });
