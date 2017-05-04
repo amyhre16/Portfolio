@@ -52,7 +52,7 @@ $(document).ready(function () {
 		"while (!asleep) {<br />" +
 			"&nbsp&nbsp&nbsp&nbspsheep++;<br />}",
 		"<strong>Q:</strong> What happened to the frog that was parked illegally?<br />" +
-			"<strong>A:</strong> He got toad.",
+			"<strong>A:</strong> It got toad.",
 		"<strong>Q:</strong> What time does Sean Connery get to Wimbledon?<br />" +
 		"<strong>A:</strong> Tennish.",
 		"<strong>Q:</strong> What do you call a cow with no legs?<br />" +
