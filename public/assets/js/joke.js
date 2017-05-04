@@ -41,16 +41,30 @@ $(document).ready(function () {
 		"Yesterday a clown held the door open for me. I thought it was a nice jester.",
 		"I used to want to be a banker....but I lost interest.",
 		"I was walking through a quarry and said to the foreman, \"That's a big rock!\" \"Boulder,\" he replied. So I puffed out my chest and shouted, \"Look at that enormous rock over there!!\"",
-		"It's hard to explain puns to a kleptomaniacs, because they always take things literally",
-		"Did you hear the joke about the German sausage? It was the wurst",
+		"It's hard to explain puns to a kleptomaniacs, because they always take things literally.",
+		"Did you hear the joke about the German sausage? It was the wurst.",
 		"There are 10 types of people in the world: Those who understand binary and those who don't.",
 		"A guy walks into a bar and asks for 1.014 root beers. The bartender says,\"I'll have to charge you extra, that's a root beer float.\" So the guy says, \"In that case, better make it a double.\"",
 		"In order to understand recursion, you must first understand recursion.",
 		"<strong>Q:</strong> What do you call it when a programmer throws up at IHOP?<br />" +
-		"<strong>A:</strong> A stack overflow.",
+			"<strong>A:</strong> A stack overflow.",
 		"// Solution to insomnia<br />" +
 		"while (!asleep) {<br />" +
-		"&nbsp&nbsp&nbsp&nbspsheep++;<br />}"
+			"&nbsp&nbsp&nbsp&nbspsheep++;<br />}",
+		"<strong>Q:</strong> What happened to the frog that was parked illegally?<br />" +
+			"<strong>A:</strong> He got toad.",
+		"<strong>Q:</strong> What time does Sean Connery get to Wimbledon?<br />" +
+		"<strong>A:</strong> Tennish.",
+		"<strong>Q:</strong> What do you call a cow with no legs?<br />" +
+		"<strong>A:</strong> Ground beef.",
+		"<strong>Q:</strong> How is imitation like a plateau?<br />" +
+		"<strong>A:</strong> They're both the highest form of flattery.",
+		"<strong>Q:</strong> What's the best thing about living in Switzerland?<br />" +
+		"<strong>A:</strong> I don't know, but the flag is a big plus.",
+		"<strong>Q:</strong> What does Batman get in his drinks?<br />" +
+		"<strong>A:</strong> Just ice.",
+		"<strong>Q:</strong> What does a nosy pepper do?<br />" +
+		"<strong>A:</strong> Gets jalepe&ntilde;o business."
 	];
 
 	var random_index = Math.floor(Math.random() * jokes.length);
